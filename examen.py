@@ -57,3 +57,24 @@ class Pediatre(Employe):
     """ Polymorphisme """
     def action(self):
         print("Le pédiatre prescrit un vaccin.")
+class Cardiologue(Employe):
+    def __init__(self, nom, specialite, hopital):
+        self.__nom = nom
+        self.__specialite = specialite
+        self.hopital = hopital
+    """ Le get et  le set pour acceder aux methodes prives """
+    def getnom(self):
+        return self.__nom
+    def setnom(self,nom):
+        self.__nom = nom
+    def getspecialite(self):
+        return self.__specialite
+    def setspecialite(self,specialite):
+        self.__specialite=specialite
+    """ Creation des methodes """
+    # Surcharge de la méthode afficher_infos pour inclure l'hôpital
+    def afficher_infos(self):
+        print(f"Nom: {self.__nom}\nSpecialite: {self.__specialite}\nHopital: {self.hopital}")
+    """ Polymorphisme """
+    def action(self):
+        print("Le cardiologue effectue une échographie.")
