@@ -78,3 +78,27 @@ class Cardiologue(Employe):
     """ Polymorphisme """
     def action(self):
         print("Le cardiologue effectue une échographie.")
+
+"""Instanciation des classes """
+print("Infos sur le medecin")
+setnom=input("Entrer le nom du medecin: ")
+setspecialite=input("Entrer son specialite: ")
+medecin_generaliste = Medecin(setnom, setspecialite)
+medecin_generaliste.afficher_infos()
+medecin_generaliste.action()
+
+print("Infos sur le Pediatre")
+setnom=input("Entrer le nom du pediatre: ")
+setspecialite=input("Entrer son specialite: ")
+service=input("Entrer son service: ")
+pediatre_hopital = Pediatre(setnom, setspecialite, service)
+pediatre_hopital.afficher_infos()
+pediatre_hopital.action()
+
+print("Infos sur le Cardiologue")
+setnom=input("Entrer le nom du cardiologue: ")
+setspecialite=input("Entrer son specialite: ")
+hopital=input("Entrer son Hopital: ")
+cardiologue_prive = Cardiologue(setnom, setspecialite, hopital)
+cardiologue_prive.afficher_infos()
+cardiologue_prive.action()
